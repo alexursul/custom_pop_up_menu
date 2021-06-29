@@ -173,11 +173,7 @@ class _CustomPopupMenuState extends State<CustomPopupMenu> {
   @override
   Widget build(BuildContext context) {
     var child = Material(
-      child: InkWell(
-        hoverColor: Colors.transparent,
-        focusColor: Colors.transparent,
-        splashColor: Colors.transparent,
-        highlightColor: Colors.transparent,
+      child: GestureDetector(
         child: widget.child,
         onTap: widget.pressType == PressType.singleClick ? () {
           _showMenu();
